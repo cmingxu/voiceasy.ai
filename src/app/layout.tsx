@@ -3,6 +3,8 @@ import Link from "next/link";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Button } from "@/components/ui/button";
+import { Analytics } from "@vercel/analytics/next"
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -112,6 +114,7 @@ export default function RootLayout({
             © {new Date().getFullYear()} voiceasy.ai. All rights reserved.
           </div>
         </footer>
+        <Analytics/>
       </body>
     </html>
   );
