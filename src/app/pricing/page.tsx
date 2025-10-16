@@ -5,7 +5,14 @@ import { Button } from "@/components/ui/button";
 
 export const metadata = {
   title: "Pricing — voiceasy.ai",
-  description: "Simple, transparent pricing for voiceasy.ai.",
+  description: "Simple, transparent pricing for AI voice generation, multiple tones, and easy voice cloning.",
+  keywords: [
+    "Voice Generator Pricing",
+    "AI Voice Pricing",
+    "Voice Cloning Pricing",
+    "TTS Pricing",
+    "Tone Synthesis Pricing"
+  ],
 };
 
 export default function PricingPage() {

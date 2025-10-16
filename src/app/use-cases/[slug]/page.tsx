@@ -6,8 +6,8 @@ const registry: Record<string, { title: string; description: string }> = {
     description: "Automate inbound support calls with human-like agents that resolve issues and escalate when needed.",
   },
   "voice-changer-streaming": {
-    title: "Voice Changer for Streaming",
-    description: "Change your voice in real-time on streams and calls with low latency and high quality.",
+    title: "Voice Generator for Streaming",
+    description: "Generate or transform voices in real-time on streams and calls with low latency and high quality.",
   },
   "studio-tts": {
     title: "Studio TTS for Podcasts & Videos",

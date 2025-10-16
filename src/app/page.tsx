@@ -17,6 +17,7 @@ import {
   TabsContent,
 } from "@/components/ui/tabs";
 import AuroraBackground from "@/components/aurora-background";
+import { PhoneCall, Languages, Mic, Wand2, AudioLines, Code2 } from "lucide-react";
 
 export default function Home() {
   return (
@@ -26,17 +27,17 @@ export default function Home() {
         <AuroraBackground />
         <div className="flex items-center justify-center gap-2 flex-wrap">
           <Badge variant="secondary">voiceasy.ai</Badge>
-          <Badge>AI Voice Platform</Badge>
+          <Badge>AI Voice Generator Platform</Badge>
         </div>
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">
-          Human‑like AI Voice Agents and Voice Changer
+          Human‑like AI Voice Generator — Multiple Tones & Easy Cloning
         </h1>
         <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
-          Automate calls, transform voices in real time, clone voices, and generate studio‑quality text‑to‑speech — built for speed and scale.
+          Generate lifelike voices in real time, switch between multiple tones, and clone voices in minutes. Studio‑quality TTS and developer APIs built for speed and scale.
         </p>
         <div className="flex items-center justify-center gap-3">
           <Button asChild>
-            <a href="mailto:cming.xu@gmail.com?subject=Start%20voiceasy.ai&body=I%20want%20to%20start%20with%20voiceasy.ai">Start Talking</a>
+            <a href="mailto:cming.xu@gmail.com?subject=Start%20voiceasy.ai&body=I%20want%20to%20start%20with%20voiceasy.ai">Generate a Voice</a>
           </Button>
           <Button variant="secondary" asChild>
             <a href="mailto:cming.xu@gmail.com?subject=Contact%20voiceasy.ai&body=Hi%20there,%20let’s%20chat%20about%20voiceasy.ai">Contact Us</a>
@@ -47,12 +48,21 @@ export default function Home() {
       {/* Feature grid */}
       <section>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <Card>
+          {/* Voice Agents */}
+          <Card className="relative group overflow-hidden transition duration-200 hover:-translate-y-0.5 hover:shadow-md">
+            <div className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-primary/10 blur-2xl" />
             <CardHeader>
-              <CardTitle>Voice Agents</CardTitle>
-              <CardDescription>
-                Human‑like phone agents that automate inbound/outbound calls and scheduling.
-              </CardDescription>
+              <div className="flex items-start gap-3">
+                <div className="rounded-md p-2 bg-primary/10 text-primary ring-1 ring-primary/20">
+                  <PhoneCall className="h-5 w-5" />
+                </div>
+                <div>
+                  <CardTitle>Voice Agents</CardTitle>
+                  <CardDescription>
+                    Human‑like phone agents that automate inbound/outbound calls and scheduling.
+                  </CardDescription>
+                </div>
+              </div>
             </CardHeader>
             <CardContent>
               <p className="text-sm text-muted-foreground">
@@ -64,14 +74,24 @@ export default function Home() {
                 <a href="mailto:cming.xu@gmail.com?subject=Voice%20Agents%20Demo">Start</a>
               </Button>
             </CardFooter>
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
           </Card>
 
-          <Card>
+          {/* Speak Every Language */}
+          <Card className="relative group overflow-hidden transition duration-200 hover:-translate-y-0.5 hover:shadow-md">
+            <div className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-primary/10 blur-2xl" />
             <CardHeader>
-              <CardTitle>Speak Every Language</CardTitle>
-              <CardDescription>
-                Localize voices to any accent or language in real time.
-              </CardDescription>
+              <div className="flex items-start gap-3">
+                <div className="rounded-md p-2 bg-primary/10 text-primary ring-1 ring-primary/20">
+                  <Languages className="h-5 w-5" />
+                </div>
+                <div>
+                  <CardTitle>Speak Every Language</CardTitle>
+                  <CardDescription>
+                    Localize voices to any accent or language in real time.
+                  </CardDescription>
+                </div>
+              </div>
             </CardHeader>
             <CardContent>
               <p className="text-sm text-muted-foreground">
@@ -83,37 +103,57 @@ export default function Home() {
                 <a href="mailto:cming.xu@gmail.com?subject=Localization%20Support">Contact</a>
               </Button>
             </CardFooter>
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
           </Card>
 
-          <Card>
+          {/* Voice Generator */}
+          <Card className="relative group overflow-hidden transition duration-200 hover:-translate-y-0.5 hover:shadow-md">
+            <div className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-primary/10 blur-2xl" />
             <CardHeader>
-              <CardTitle>Real‑time Voice Changer</CardTitle>
-              <CardDescription>
-                Instantly switch between thousands of voices for gaming and streaming.
-              </CardDescription>
+              <div className="flex items-start gap-3">
+                <div className="rounded-md p-2 bg-primary/10 text-primary ring-1 ring-primary/20">
+                  <Mic className="h-5 w-5" />
+                </div>
+                <div>
+                  <CardTitle>Real‑time Voice Generator</CardTitle>
+                  <CardDescription>
+                    Instantly switch between tones, clone voices, and stream in real time.
+                  </CardDescription>
+                </div>
+              </div>
             </CardHeader>
             <CardContent>
               <p className="text-sm text-muted-foreground">
-                Low‑latency transformation with lifelike quality and noise removal.
+                Low‑latency generation with lifelike quality, noise removal, and tone control.
               </p>
             </CardContent>
             <CardFooter>
               <Button size="sm" asChild>
-                <a href="mailto:cming.xu@gmail.com?subject=Voice%20Changer">Start</a>
+                <a href="mailto:cming.xu@gmail.com?subject=Voice%20Generator">Start</a>
               </Button>
             </CardFooter>
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
           </Card>
 
-          <Card>
+          {/* Clone & Customize Voices */}
+          <Card className="relative group overflow-hidden transition duration-200 hover:-translate-y-0.5 hover:shadow-md">
+            <div className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-primary/10 blur-2xl" />
             <CardHeader>
-              <CardTitle>Clone & Customize Voices</CardTitle>
-              <CardDescription>
-                Create unique, lifelike voices from short audio samples.
-              </CardDescription>
+              <div className="flex items-start gap-3">
+                <div className="rounded-md p-2 bg-primary/10 text-primary ring-1 ring-primary/20">
+                  <Wand2 className="h-5 w-5" />
+                </div>
+                <div>
+                  <CardTitle>Easy Voice Cloning</CardTitle>
+                  <CardDescription>
+                    Clone voices from short samples; fine‑tune tone and style.
+                  </CardDescription>
+                </div>
+              </div>
             </CardHeader>
             <CardContent>
               <p className="text-sm text-muted-foreground">
-                Build brand‑consistent voices for products and experiences.
+                Build brand‑consistent voices and multiple tones for products and experiences.
               </p>
             </CardContent>
             <CardFooter>
@@ -121,14 +161,24 @@ export default function Home() {
                 <a href="mailto:cming.xu@gmail.com?subject=Voice%20Cloning">Contact</a>
               </Button>
             </CardFooter>
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
           </Card>
 
-          <Card>
+          {/* Text to Speech */}
+          <Card className="relative group overflow-hidden transition duration-200 hover:-translate-y-0.5 hover:shadow-md">
+            <div className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-primary/10 blur-2xl" />
             <CardHeader>
-              <CardTitle>Text to Speech</CardTitle>
-              <CardDescription>
-                Studio‑quality TTS at enterprise scale with low latency.
-              </CardDescription>
+              <div className="flex items-start gap-3">
+                <div className="rounded-md p-2 bg-primary/10 text-primary ring-1 ring-primary/20">
+                  <AudioLines className="h-5 w-5" />
+                </div>
+                <div>
+                  <CardTitle>Text to Speech</CardTitle>
+                  <CardDescription>
+                    Studio‑quality TTS with tone control at enterprise scale and low latency.
+                  </CardDescription>
+                </div>
+              </div>
             </CardHeader>
             <CardContent>
               <p className="text-sm text-muted-foreground">
@@ -140,18 +190,28 @@ export default function Home() {
                 <a href="mailto:cming.xu@gmail.com?subject=TTS%20Capabilities">Start</a>
               </Button>
             </CardFooter>
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
           </Card>
 
-          <Card>
+          {/* For Developers */}
+          <Card className="relative group overflow-hidden transition duration-200 hover:-translate-y-0.5 hover:shadow-md">
+            <div className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-primary/10 blur-2xl" />
             <CardHeader>
-              <CardTitle>For Developers</CardTitle>
-              <CardDescription>
-                Build with TypeScript and Python SDKs and low‑latency APIs.
-              </CardDescription>
+              <div className="flex items-start gap-3">
+                <div className="rounded-md p-2 bg-primary/10 text-primary ring-1 ring-primary/20">
+                  <Code2 className="h-5 w-5" />
+                </div>
+                <div>
+                  <CardTitle>For Developers</CardTitle>
+                  <CardDescription>
+                    Build with TypeScript and Python SDKs and low‑latency APIs.
+                  </CardDescription>
+                </div>
+              </div>
             </CardHeader>
             <CardContent>
               <p className="text-sm text-muted-foreground">
-                Integrate voice agents, TTS, and voice changer into any stack.
+                Integrate voice generator, multi‑tone TTS, and voice cloning into any stack.
               </p>
             </CardContent>
             <CardFooter>
@@ -159,6 +219,7 @@ export default function Home() {
                 <a href="mailto:cming.xu@gmail.com?subject=Developer%20Access">Contact</a>
               </Button>
             </CardFooter>
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
           </Card>
         </div>
       </section>

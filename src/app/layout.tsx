@@ -4,7 +4,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Button } from "@/components/ui/button";
 import { Analytics } from "@vercel/analytics/next"
+import Logo from "@/components/logo";
 import { PhoneCall, Mic, AudioLines, GraduationCap, Megaphone, Accessibility } from "lucide-react";
+import Footer from "@/components/footer";
 
 
 const geistSans = Geist({
@@ -20,24 +22,38 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://voiceasy.ai"),
   title: {
-    default: "voiceasy.ai — AI Voice Agents, Voice Changer, TTS",
+    default: "voiceasy.ai — AI Voice Generator, Multiple Voice Tones, Easy Voice Cloning",
     template: "%s | voiceasy.ai",
   },
   description:
-    "Deploy human-like AI voice agents, real-time voice changing, voice cloning, and studio-quality text to speech.",
+    "Generate lifelike voices with multiple tones and easy voice cloning. Real-time streaming, studio-quality TTS, and developer-friendly APIs.",
+  keywords: [
+    "AI Voice Generator",
+    "Voice Generator",
+    "Voice Cloning",
+    "Easy Voice Cloning",
+    "Multiple Voice Tones",
+    "Tone Synthesis",
+    "Text to Speech",
+    "TTS",
+    "Real-time Voice",
+    "Streaming Voice",
+    "AI Voices",
+    "Voice AI"
+  ],
   openGraph: {
-    title: "voiceasy.ai",
+    title: "voiceasy.ai — AI Voice Generator & Voice Cloning",
     description:
-      "AI voice agents for calls, real-time voice changer, cloning, and enterprise-grade TTS.",
+      "Generate lifelike voices with multiple tones, easy cloning, real-time streaming, and studio-quality TTS.",
     url: "https://voiceasy.ai",
     siteName: "voiceasy.ai",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "voiceasy.ai",
+    title: "voiceasy.ai — AI Voice Generator & Voice Cloning",
     description:
-      "AI voice agents for calls, real-time voice changer, cloning, and enterprise-grade TTS.",
+      "Generate lifelike voices with multiple tones, easy cloning, real-time streaming, and studio-quality TTS.",
   },
 };
 
@@ -51,8 +67,9 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}> 
         <header className="sticky top-0 z-50 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
           <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
-            <Link href="/" className="font-semibold text-xl tracking-tight">
-              voiceasy.ai
+            <Link href="/" className="flex items-center gap-2">
+              <Logo className="h-6 w-6" />
+              <span className="font-semibold text-xl tracking-tight">voiceasy.ai</span>
             </Link>
             <nav className="flex items-center gap-4">
               <div className="relative group">
@@ -77,8 +94,8 @@ export default function RootLayout({
                       <Link href="/use-cases/voice-changer-streaming" className="flex items-start gap-3 rounded-md px-3 py-2 transition hover:bg-muted hover:shadow-sm">
                         <Mic className="h-4 w-4 mt-0.5 text-muted-foreground" />
                         <div>
-                          <div className="text-sm font-medium">Voice Changer for Streaming</div>
-                          <p className="text-xs text-muted-foreground">Change your voice live on streams and video calls.</p>
+                          <div className="text-sm font-medium">Voice Generator for Streaming</div>
+                          <p className="text-xs text-muted-foreground">Generate or transform voices live on streams and video calls.</p>
                         </div>
                       </Link>
                       <Link href="/use-cases/studio-tts" className="flex items-start gap-3 rounded-md px-3 py-2 transition hover:bg-muted hover:shadow-sm">
@@ -132,11 +149,7 @@ export default function RootLayout({
           </div>
         </header>
         <main>{children}</main>
-        <footer className="border-t">
-          <div className="mx-auto max-w-6xl px-6 py-8 text-sm text-muted-foreground">
-            © {new Date().getFullYear()} voiceasy.ai. All rights reserved.
-          </div>
-        </footer>
+        <Footer />
         <Analytics/>
       </body>
     </html>

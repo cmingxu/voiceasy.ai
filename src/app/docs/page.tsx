@@ -4,7 +4,7 @@ export default function DocsIndexPage() {
       <header className="space-y-2">
         <h2 className="text-2xl font-semibold">Getting Started</h2>
         <p className="text-sm text-muted-foreground">
-          Welcome to the voiceasy.ai docs. Start here to explore guides and APIs.
+          Welcome to the voiceasy.ai docs. Build with AI voice generation, multiple voice tones, easy voice cloning, and TTS APIs.
         </p>
       </header>
 

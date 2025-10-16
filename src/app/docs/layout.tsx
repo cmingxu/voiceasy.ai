@@ -5,7 +5,15 @@ import { DocsNav } from "./_components/nav";
 export const metadata: Metadata = {
   title: "Documentation — voiceasy.ai",
   description:
-    "Learn how to use voiceasy.ai APIs for Text-to-Speech, Tone Synthesis, and managing your tones.",
+    "Build with voiceasy.ai APIs for AI voice generation, multiple voice tones, easy voice cloning, and Text-to-Speech.",
+  keywords: [
+    "Voice Generator Docs",
+    "Voice Cloning Docs",
+    "Multiple Voice Tones",
+    "Tone Synthesis",
+    "Text to Speech",
+    "Developer API"
+  ],
 };
 
 export default function DocsLayout({
