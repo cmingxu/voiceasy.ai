@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Button } from "@/components/ui/button";
 import { Analytics } from "@vercel/analytics/next"
+import { PhoneCall, Mic, AudioLines, GraduationCap, Megaphone, Accessibility } from "lucide-react";
 
 
 const geistSans = Geist({
@@ -61,32 +62,54 @@ export default function RootLayout({
                 >
                   Use Cases
                 </Link>
-                <div className="absolute left-1/2 top-full -translate-x-1/2 mt-2 w-[420px] rounded-lg border bg-popover text-popover-foreground shadow-lg opacity-0 scale-95 origin-top transition-all duration-150 group-hover:opacity-100 group-hover:scale-100">
-                  <div className="grid grid-cols-1 gap-2 p-3">
-                    <Link href="/use-cases/ai-voice-agents" className="block rounded-md px-3 py-2 hover:bg-muted">
-                      <div className="text-sm font-medium">AI Voice Agents for Support</div>
-                      <p className="text-xs text-muted-foreground">Automate inbound support calls with human-like agents.</p>
-                    </Link>
-                    <Link href="/use-cases/voice-changer-streaming" className="block rounded-md px-3 py-2 hover:bg-muted">
-                      <div className="text-sm font-medium">Voice Changer for Streaming</div>
-                      <p className="text-xs text-muted-foreground">Change your voice live on streams and video calls.</p>
-                    </Link>
-                    <Link href="/use-cases/studio-tts" className="block rounded-md px-3 py-2 hover:bg-muted">
-                      <div className="text-sm font-medium">Studio TTS for Podcasts & Videos</div>
-                      <p className="text-xs text-muted-foreground">Generate narration with studio-quality text-to-speech.</p>
-                    </Link>
-                    <Link href="/use-cases/training-education" className="block rounded-md px-3 py-2 hover:bg-muted">
-                      <div className="text-sm font-medium">Training & Education Narration</div>
-                      <p className="text-xs text-muted-foreground">Create lessons and multilingual course audio at scale.</p>
-                    </Link>
-                    <Link href="/use-cases/call-center-automation" className="block rounded-md px-3 py-2 hover:bg-muted">
-                      <div className="text-sm font-medium">Call Center Automation</div>
-                      <p className="text-xs text-muted-foreground">Run outbound campaigns with intelligent voice agents.</p>
-                    </Link>
-                    <Link href="/use-cases/accessibility-reader" className="block rounded-md px-3 py-2 hover:bg-muted">
-                      <div className="text-sm font-medium">Accessibility Reading Assistant</div>
-                      <p className="text-xs text-muted-foreground">Assistive reading for websites, documents, and apps.</p>
-                    </Link>
+                <div className="absolute left-1/2 top-full -translate-x-1/2 mt-2 w-[480px] rounded-xl border bg-popover text-popover-foreground shadow-xl opacity-0 scale-95 origin-top transition-all duration-150 group-hover:opacity-100 group-hover:scale-100">
+                  <div className="relative">
+                    <div className="pointer-events-none absolute -inset-2 rounded-2xl bg-gradient-to-b from-foreground/5 to-transparent blur-xl" />
+                    <div className="relative border-b px-4 py-2 text-xs font-medium tracking-wide text-muted-foreground">Explore Use Cases</div>
+                    <div className="relative grid grid-cols-1 md:grid-cols-2 gap-2 p-3">
+                      <Link href="/use-cases/ai-voice-agents" className="flex items-start gap-3 rounded-md px-3 py-2 transition hover:bg-muted hover:shadow-sm">
+                        <PhoneCall className="h-4 w-4 mt-0.5 text-muted-foreground" />
+                        <div>
+                          <div className="text-sm font-medium">AI Voice Agents for Support</div>
+                          <p className="text-xs text-muted-foreground">Automate inbound support calls with human-like agents.</p>
+                        </div>
+                      </Link>
+                      <Link href="/use-cases/voice-changer-streaming" className="flex items-start gap-3 rounded-md px-3 py-2 transition hover:bg-muted hover:shadow-sm">
+                        <Mic className="h-4 w-4 mt-0.5 text-muted-foreground" />
+                        <div>
+                          <div className="text-sm font-medium">Voice Changer for Streaming</div>
+                          <p className="text-xs text-muted-foreground">Change your voice live on streams and video calls.</p>
+                        </div>
+                      </Link>
+                      <Link href="/use-cases/studio-tts" className="flex items-start gap-3 rounded-md px-3 py-2 transition hover:bg-muted hover:shadow-sm">
+                        <AudioLines className="h-4 w-4 mt-0.5 text-muted-foreground" />
+                        <div>
+                          <div className="text-sm font-medium">Studio TTS for Podcasts & Videos</div>
+                          <p className="text-xs text-muted-foreground">Generate narration with studio-quality text-to-speech.</p>
+                        </div>
+                      </Link>
+                      <Link href="/use-cases/training-education" className="flex items-start gap-3 rounded-md px-3 py-2 transition hover:bg-muted hover:shadow-sm">
+                        <GraduationCap className="h-4 w-4 mt-0.5 text-muted-foreground" />
+                        <div>
+                          <div className="text-sm font-medium">Training & Education Narration</div>
+                          <p className="text-xs text-muted-foreground">Create lessons and multilingual course audio at scale.</p>
+                        </div>
+                      </Link>
+                      <Link href="/use-cases/call-center-automation" className="flex items-start gap-3 rounded-md px-3 py-2 transition hover:bg-muted hover:shadow-sm">
+                        <Megaphone className="h-4 w-4 mt-0.5 text-muted-foreground" />
+                        <div>
+                          <div className="text-sm font-medium">Call Center Automation</div>
+                          <p className="text-xs text-muted-foreground">Run outbound campaigns with intelligent voice agents.</p>
+                        </div>
+                      </Link>
+                      <Link href="/use-cases/accessibility-reader" className="flex items-start gap-3 rounded-md px-3 py-2 transition hover:bg-muted hover:shadow-sm">
+                        <Accessibility className="h-4 w-4 mt-0.5 text-muted-foreground" />
+                        <div>
+                          <div className="text-sm font-medium">Accessibility Reading Assistant</div>
+                          <p className="text-xs text-muted-foreground">Assistive reading for websites, documents, and apps.</p>
+                        </div>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
